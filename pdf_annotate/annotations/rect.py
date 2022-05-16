@@ -39,6 +39,7 @@ class RectAnnotation(Annotation):
 
     def add_additional_pdf_object_data(self, obj):
         A = self._appearance
+        obj.Contents = A.content
         obj.BS = make_border_dict(A)
         obj.C = A.stroke_color
         if A.fill:
